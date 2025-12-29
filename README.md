@@ -131,7 +131,27 @@ LaMa (Large Mask Inpainting) là một phương pháp inpainting hiện đại s
 📄 Paper: *Resolution-robust Large Mask Inpainting with Fourier Convolutions*
 
 ---
+## 📓 Thực nghiệm với Jupyter Notebook
 
+### Simple_LaMa.ipynb
+
+File **`Simple_LaMa.ipynb`** được cung cấp nhằm phục vụ mục đích **thực nghiệm và phân tích mô hình Simple LaMa** trong môi trường Jupyter Notebook. Notebook này tập trung vào việc đánh giá chất lượng inpainting một cách định lượng và trực quan.
+
+Các nội dung chính trong notebook bao gồm:
+
+* 🚀 **Load pretrained Simple LaMa model** từ checkpoint
+* 🖼️ **Chạy inpainting trên tập ảnh thử nghiệm** với các mask khác nhau
+* 📊 **Đánh giá mô hình bằng các độ đo chuẩn**:
+
+  * **FID (Fréchet Inception Distance)**: đo mức độ tương đồng phân phối giữa ảnh inpainted và ảnh gốc
+  * **LPIPS (Learned Perceptual Image Patch Similarity)**: đo sự khác biệt cảm nhận thị giác giữa hai ảnh
+* 👀 **Trực quan hóa kết quả**:
+
+  * Ảnh gốc
+  * Ảnh bị mask
+  * Ảnh sau khi inpainting
+  * So sánh trực tiếp giữa các kết quả
+    
 ## 📌 Ghi chú
 
 * Project phục vụ mục đích **demo và học tập**
@@ -150,4 +170,7 @@ LaMa (Large Mask Inpainting) là một phương pháp inpainting hiện đại s
 ## ⭐ Nếu thấy hữu ích
 
 Đừng quên để lại một ⭐ cho repository nhé!
+
+
+
 
