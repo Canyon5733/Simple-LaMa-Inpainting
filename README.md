@@ -151,7 +151,9 @@ Các nội dung chính trong notebook bao gồm:
   * Ảnh bị mask
   * Ảnh sau khi inpainting
   * So sánh trực tiếp giữa các kết quả
-    
+
+
+---
 ## 📌 Ghi chú
 
 * Project phục vụ mục đích **demo và học tập**
