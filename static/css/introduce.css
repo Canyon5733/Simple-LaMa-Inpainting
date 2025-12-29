@@ -1,0 +1,240 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Header and Navbar */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #1e293b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #fef08a, #fde047);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.sub-text {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Hero media (video) */
+.hero-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.demo-video {
+  height: 300px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.demo-video:hover {
+  transform: translateY(-5px);
+}
+
+/* Upload and suggested section */
+.upload-suggested {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.upload-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.upload-box {
+  border: 2px dashed #3b82f6;
+  padding: 2.5rem;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.upload-box p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.upload-box:hover {
+  background-color: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.suggested-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.suggested-samples {
+  text-align: center;
+}
+
+.suggested-samples p {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.sample-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sample-list img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sample-list img:hover {
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .demo-video {
+    height: 250px;
+  }
+
+  .upload-suggested {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Edit and remove objects from your images using AI-powered technology">
+  <title>Edit Image | AI Object Removal</title>
+  <link rel="stylesheet" href="../static/css/edit.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-magic"></i>
+        LaMa Inpainting
+      </div>
+      <ul>
+        <li><a href="https://github.com/dattrieuK17/inpainting.git" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> Github
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <div class="editor-container">
+      <canvas id="imageCanvas"></canvas>
+      <canvas id="maskCanvas"></canvas>
+    </div>
+
+    <div class="backward_forward">
+      <button id="undoButton" class="undo-button" onclick="undo()">
+        <i class="fas fa-undo"></i>
+      </button>
+      <button id="redoButton" class="redo-button" onclick="redo()">
+        <i class="fas fa-redo"></i>
+      </button>
+    </div>
+    
+    <div class="controls">
+      <div class="brush-control">
+        <label for="brushSize">
+          <i class="fas fa-paint-brush"></i>
+        </label>
+        <input type="range" id="brushSize" min="5" max="50" value="15" onchange="updateBrushSize(this.value)" />
+      </div>
+      
+      <button onclick="toggleEraser()" id="eraserButton" class="tool-button">
+        <i class="fas fa-eraser"></i>
+        Eraser
+      </button>
+      
+      <!-- <button onclick="saveMask()" class="tool-button">
+        <i class="fas fa-save"></i>
+        Save Mask
+      </button> -->
+      <button onclick="applyInpainting()" class="tool-button">
+        <i class="fas fa-magic"></i>
+        Apply Inpainting
+      </button>
+      <button onclick="resetImage()" class="tool-button">
+        <i class="fas fa-undo"></i>
+        Reset
+      </button>
+    </div>
+  </main>
+
+  <script>
+    // Pass the filename from Flask template to JavaScript
+    window.initialFilename = "{{ filename }}";
+  </script>
+
+  <script src="../static/js/edit.js"></script>
+</body>
+</html>
