@@ -21,6 +21,8 @@ http://localhost:5000
 
 để tải ảnh lên và trải nghiệm khả năng inpainting của mô hình LaMa.
 
+![LaMa Demo](demo/LaMa.png)
+
 ---
 
 ## 📁 Cấu trúc thư mục (rút gọn)
